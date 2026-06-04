@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Surabaya Life On a Budget</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌴</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<!-- HEADER -->
+<header>
+  <a href="#home" class="logo">
+    <div class="logo-icon">🌴</div>
+    <div class="logo-text">
+      Surabaya On a Budget
+      <span>Hidup Hemat di Kota Pahlawan</span>
+    </div>
+  </a>
+  <nav id="nav">
+    <a href="#home">Home</a>
+    <a href="#budget">Budget Guide</a>
+    <a href="#about">About Us</a>
+  </nav>
+  <div class="hamburger" onclick="toggleNav()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </div>
+</header>
+
+<!-- HOME -->
+<section id="home">
+  <div class="home-hero">
+    <h1>Hidup Hemat di<br><em>Surabaya</em></h1>
+    <p>Panduan lengkap untuk mahasiswa perantauan — nikmati kuliah, jalan-jalan, dan nongki tanpa khawatir kantong jebol.</p>
+  </div>
+
+  <div class="carousel-wrapper">
+    <div class="carousel" id="carousel">
+
+      <div class="carousel-card">
+        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=700&q=80" alt="Mahasiswa">
+        <div class="carousel-card-body">
+          <div class="carousel-card-tag">Tantangan</div>
+          <h3>Mahasiswa &amp; Tantangan Biaya Hidup di Surabaya</h3>
+        </div>
+      </div>
+
+      <div class="carousel-card">
+        <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=700&q=80" alt="Hemat">
+        <div class="carousel-card-body">
+          <div class="carousel-card-tag">Tips</div>
+          <h3>Cara Hidup Hemat Sebagai Mahasiswa</h3>
+        </div>
+      </div>
+
+      <div class="carousel-card">
+        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=700&q=80" alt="Budget">
+        <div class="carousel-card-body">
+          <div class="carousel-card-tag">Panduan</div>
+          <h3>Panduan Budget Mahasiswa Di Surabaya</h3>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="home-desc">
+    <div class="home-label">
+        <h2>Why Do We Exist?</h2>
+    </div>
+    <div class="home-desc-inner">  
+      <p>Surabaya merupakan salah satu kota pendidikan besar di Indonesia. Banyak mahasiswa dari berbagai daerah datang untuk menempuh pendidikan di kampus seperti Institut Teknologi Sepuluh Nopember. Namun, biaya hidup di kota besar sering menjadi tantangan bagi mahasiswa, terutama bagi mahasiswa perantauan. Pengeluaran seperti makanan, transportasi, tempat tinggal, dan kebutuhan sehari-hari dapat menjadi cukup tinggi jika tidak dikelola dengan baik.</p>
+    </div>
+  </div>
+</section>
+
+<!-- BUDGET -->
+<section id="budget">
+  <div class="section-header">
+    <div class="section-label">Panduan</div>
+    <h2>Budget Guide</h2>
+  </div>
+
+  <div class="budget-grid">
+
+    <div class="budget-card" onclick="openModal('Warung')">
+      <div class="budget-card-top">
+        <span class="budget-card-icon">🍜</span>
+      </div>
+      <div class="budget-card-body">
+        <h3>Warung on a Budget</h3>
+        <p>Pilihan warung murah meriah dengan menu mengenyangkan dan harga ramah di kantong &amp; Cocok untuk makan sehari-hari tanpa bikin budget jebol</p>
+        <button class="btn-explore">Explore →</button>
+      </div>
+    </div>
+
+    <div class="budget-card" onclick="openModal('Cafe')">
+      <div class="budget-card-top">
+        <span class="budget-card-icon">☕</span>
+      </div>
+      <div class="budget-card-body">
+        <h3>Nongki on a Budget</h3>
+        <p>Rekomendasi cafe nyaman dengan harga terjangkau untuk nongkrong, nugas, &amp; atau sekadar cari suasana santai tanpa harus keluar banyak biaya</p>
+        <button class="btn-explore">Explore →</button>
+      </div>
+    </div>
+
+    <div class="budget-card" onclick="openModal('NongkiNonstop')">
+      <div class="budget-card-top">
+        <span class="budget-card-icon">🍽️</span>
+      </div>
+      <div class="budget-card-body">
+        <h3>Nongki Non-stop</h3>
+        <p>Tempat makan dan nongkrong yang buka hingga larut malam bahkan 24 jam, &amp; cocok untuk mahasiswa, pekerja malam, atau siapa saja yang butuh tempat fleksibel kapan saja</p>
+        <button class="btn-explore">Explore →</button>
+      </div>
+    </div>
+
+    <div class="budget-card" onclick="openModal('Wisata')">
+      <div class="budget-card-top">
+        <span class="budget-card-icon">🏝️</span>
+      </div>
+      <div class="budget-card-body">
+        <h3>Healing Murmer</h3>
+        <p>Pilihan tempat wisata menarik dengan biaya masuk terjangkau, &amp; cocok untuk refreshing tanpa menguras dompet</p>
+        <button class="btn-explore">Explore →</button>
+      </div>
+    </div>
+
+    <div class="budget-card" onclick="openModal('FashionCewek')">
+      <div class="budget-card-top">
+        <span class="budget-card-icon">👗</span>
+      </div>
+      <div class="budget-card-body">
+        <h3>Fashion Cewek on Budget</h3>
+        <p>Rekomendasi tempat belanja fashion wanita dengan model &amp; kekinian dan harga bersahabat, pas untuk tampil stylish dengan budget hemat</p>
+        <button class="btn-explore">Explore →</button>
+      </div>
+    </div>
+
+    <div class="budget-card" onclick="openModal('FashionCowok')">
+      <div class="budget-card-top">
+        <span class="budget-card-icon">👕</span>
+      </div>
+      <div class="budget-card-body">
+        <h3>Fashion Cowok on Budget</h3>
+        <p>Pilihan store fashion pria dengan koleksi trendi, casual, &amp; hingga formal yang tetap ramah di kantong. Cocok untuk upgrade penampilan tanpa boros</p>
+        <button class="btn-explore">Explore →</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- BUDGET TOOL -->
+  <div class="budget-tool">
+    <h3>Cek Rekomendasi Budget-mu</h3>
+    <p>Masukkan budget kamu (Rp) dan lihat apa saja yang bisa dijangkau!</p>
+    <div class="budget-input-row">
+      <input type="number" id="budget-input" placeholder="Masukkan nominal (Rp)" min="0">
+      <button onclick="generateBudget()">Cek Rekomendasi</button>
+    </div>
+    <div id="result-grid"></div>
+  </div>
+
+  <!-- REALITY CHECK -->
+  <div class="section-header" style="padding-top:10px;">
+    <div class="section-label">Reality Check</div>
+    <h2>Realita Harga</h2>
+  </div>
+
+  <div class="reality-grid">
+    <div class="reality-card">
+      <h4>🌿 Wisata</h4>
+      <ul>
+        <li>Taman Grand Harvest <span class="price-tag">GRATIS</span></li>
+        <li>Taman Angsa <span class="price-tag">GRATIS</span></li>
+        <li>Graha Natura Park <span class="price-tag">GRATIS</span></li>
+      </ul>
+    </div>
+    <div class="reality-card">
+      <h4>☕ Nongki</h4>
+      <ul>
+        <li>Warkop Goeboeg 99 <span class="price-tag">1k – 25k</span></li>
+        <li>Kedai Kaladulu <span class="price-tag">15k – 30k</span></li>
+        <li>Rene Cafe <span class="price-tag">20k – 30k</span></li>
+      </ul>
+    </div>
+    <div class="reality-card">
+      <h4>👗 Fashion</h4>
+      <ul>
+        <li>Dafarin Production <span class="price-tag">50k+</span></li>
+        <li>Rubylicious <span class="price-tag">50k – 150k</span></li>
+        <li>TCO <span class="price-tag">50k – 150k</span></li>
+      </ul>
+    </div>
+    <div class="reality-card">
+      <h4>💡 Solusi Hemat</h4>
+      <ul>
+        <li>Catat pengeluaran harian <span class="price-tag">✔</span></li>
+        <li>Tentukan budget tiap pos <span class="price-tag">✔</span></li>
+        <li>Sisihkan tabungan duluan <span class="price-tag">✔</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TIPS -->
+  <div class="section-header" style="padding-top:10px;">
+    <div class="section-label">Strategi</div>
+    <h2>Tips Hidup Hemat</h2>
+  </div>
+
+  <div class="tips-section">
+    <div class="tips-row">
+      <div class="tip-card">
+        <span class="tip-icon">🍳</span>
+        <h5>Masak Sendiri</h5>
+        <p>Masak di kos bisa hemat hingga 50% dibanding makan di luar setiap hari.</p>
+      </div>
+      <div class="tip-card">
+        <span class="tip-icon">🎓</span>
+        <h5>Promo Mahasiswa</h5>
+        <p>Manfaatkan diskon KTM dan promo khusus pelajar di berbagai tempat.</p>
+      </div>
+      <div class="tip-card">
+        <span class="tip-icon">🚌</span>
+        <h5>Transport Umum</h5>
+        <p>Gunakan angkutan umum atau sepeda untuk hemat ongkos transportasi.</p>
+      </div>
+      <div class="tip-card">
+        <span class="tip-icon">⏰</span>
+        <h5>Batasi Nongki</h5>
+        <p>Nongki boleh, tapi tentukan frekuensi dan budget yang masuk akal.</p>
+      </div>
+      <div class="tip-card">
+        <span class="tip-icon">📒</span>
+        <h5>Catat Keuangan</h5>
+        <p>Gunakan aplikasi atau buku catatan untuk monitor pengeluaran harian.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-container">
+    <div class="section-label">Tim Kami</div>
+    <h2>About Us</h2>
+
+    <div class="about-desc">
+      <p>Website <strong>Surabaya Life On a Budget</strong> dibuat untuk membantu mahasiswa menjalani kehidupan hemat di Surabaya. Website ini menyediakan rekomendasi wisata gratis, tempat nongkrong murah, fashion terjangkau, serta panduan pengelolaan budget mahasiswa agar tetap bisa menikmati kehidupan kampus tanpa membebani keuangan.</p>
+    </div>
+
+    <div class="about-features">
+      <div class="about-feature">
+        <span class="about-feature-icon">🌿</span>
+        <h5>Wisata Gratis</h5>
+        <p>Kurasi taman &amp; destinasi 0 rupiah terbaik di Surabaya</p>
+      </div>
+      <div class="about-feature">
+        <span class="about-feature-icon">☕</span>
+        <h5>Nongki Murah</h5>
+        <p>Tempat nongkrong ramah kantong dengan WiFi kencang</p>
+      </div>
+      <div class="about-feature">
+        <span class="about-feature-icon">👗</span>
+        <h5>Fashion Hemat</h5>
+        <p>Outfit kekinian tanpa harus menguras tabungan</p>
+      </div>
+      <div class="about-feature" style="text-align: center;">
+        <span class="about-feature-icon">📊</span>
+        <h5>Budget Planner</h5>
+        <p>Cek rekomendasi sesuai budget yang kamu punya</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">🌴 Surabaya Life On a Budget</div>
+  <p>📸 Instagram: <a href="#">@surabayaonbudget</a></p>
+  <p>© 2026 Surabaya Life On a Budget. All rights reserved.</p>
+</footer>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modal-overlay" onclick="handleOverlayClick(event)">
+  <div class="modal-box" id="modal-box">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div id="modal-content"></div>
+  </div>
+</div>
+
+<script>
+/* ===== NAV ===== */
+function toggleNav() {
+  document.getElementById('nav').classList.toggle('open');
+}
+
+/* ===== CAROUSEL DRAG ===== */
+const carousel = document.getElementById('carousel');
+let isDragging = false, startX, scrollLeft;
+
+carousel.addEventListener('mousedown', e => {
+  isDragging = true;
+  startX = e.pageX - carousel.offsetLeft;
+  scrollLeft = carousel.scrollLeft;
+  carousel.style.cursor = 'grabbing';
+});
+carousel.addEventListener('mouseleave', () => { isDragging = false; carousel.style.cursor = 'grab'; });
+carousel.addEventListener('mouseup', () => { isDragging = false; carousel.style.cursor = 'grab'; });
+carousel.addEventListener('mousemove', e => {
+  if (!isDragging) return;
+  e.preventDefault();
+  const x = e.pageX - carousel.offsetLeft;
+  carousel.scrollLeft = scrollLeft - (x - startX) * 1.5;
+});
+
+/* ===== MODAL DATA ===== */
+const data = {
+  Warung: {
+    title: 'Kuliner Hemat Favorit',
+    subtitle: 'Makan enak, kenyang, dan tetap irit setiap hari.',
+    places: [
+      {
+        name: 'Warung Kane',
+        img: 'https://lh3.googleusercontent.com/gps-cs-s/APNQkAEapQ32kiKE8UJ1IcvsA591vCILSp_szvN6Ojqhg6ZHxbeVSWR-rsU7PCBbwTDk-b2d3MHkgajmlo3sjSxu2qFSH0iNFznd2ZFCEg7WpHsQ_p1txicjPASPe4crijFy-qz_SYaDjQ=s1360-w1360-h1020-rw',
+        address: 'Jl. Keputih Perintis IV No.18, Keputih, Sukolilo, Surabaya',
+        jam: '09.00–21.00 WIB',
+        price: 'Rp 12.000 – Rp 25.000',
+        rating: 5,
+        ratingText: '4.8/5',
+        desc: 'Warung rumahan favorit mahasiswa ITS dengan lauk harian fresh, porsi besar, dan rasa homey yang bikin nagih.',
+        features: ['🍚 Masakan rumahan', '🥘 Banyak pilihan lauk', '💸 Ramah kantong', '👨‍🎓 Favorit mahasiswa'],
+        reviews: ['"Porsinya banyak dan enak"', '"Harga cocok buat anak kos"', '"Selalu rame tiap jam makan"']
+      },
+      {
+        name: 'Depot J-One',
+        img: 'https://share.google/Xs2fDhCmNPgGf978B',
+        address: 'Perumdos ITS Blok J No.1, Keputih, Sukolilo, Surabaya',
+        jam: '08.00–18.00 WIB',
+        price: 'Rp 15.000 – Rp 30.000',
+        rating: 5,
+        ratingText: '4.9/5',
+        desc: 'Depot prasmanan legendaris dekat ITS dengan suasana hangat dan menu rumahan yang selalu berganti.',
+        features: ['🍛 Sistem prasmanan', '🏠 Suasana rumahan', '🫓 Bonus kerupuk', '📍 Dekat ITS'],
+        reviews: ['"Serasa makan di rumah"', '"Pilihan lauk lengkap"', '"Wajib coba kalau di ITS"']
+      },
+      {
+        name: 'Depot Tombo Luwe',
+        img: 'https://lh3.googleusercontent.com/gps-cs-s/APNQkAEHpgHXoCPgWRztg5BmzAj3zXqNdCR2VdWpXE-NmXrrluWtOxyv5Yo1PcOoDCTdQkM8T52q0pN2O-wDLdOnM5f0QgE_Ayd2CFMRxiMMcT0193UTCu4SZ7G3Z0xI5XPaHn1HOjDU6O58VB2W=s1360-w1360-h1020-rw',
+        address: 'Jl. Arief Rahman Hakim No.52A, Keputih, Surabaya',
+        jam: 'Setiap hari',
+        price: 'Rp 10.000 – Rp 25.000',
+        rating: 5,
+        ratingText: '4.8/5',
+        desc: 'Depot legendaris sejak 1987 dengan masakan rumahan Jawa Timur dan porsi besar.',
+        features: ['🍲 Masakan Jawa Timur', '📏 Porsi besar', '💰 Super hemat', '⭐ Legendaris'],
+        reviews: ['"Murah dan bikin kenyang"', '"Menu selalu variatif"', '"Langganan turun-temurun"']
+      },
+      {
+        name: 'Mie Ayam Nusantara',
+        img: 'https://lh3.googleusercontent.com/gps-cs-s/APNQkAHZbZ3pR7Ey77GSvjs8miigk3VcmnXgLLQpKKQI31i174P_8mFj5EYVKKn1it7AapCGOUvyhYTuAVbBqfG6KilfY0rMW1A_pnKCCWv_zJbwTwo1uOpDL-oZnT4ijtfE3DFElQ_06q6rb_NQ=w243-h304-n-k-no-nu',
+        address: 'Jl. Gebang Lor No.71, Gebang Putih, Surabaya',
+        jam: '12.00 – 22.00 WIB',
+        price: 'Rp 8.000 – Rp 15.000',
+        rating: 4,
+        ratingText: '4.6/5',
+        desc: 'Warung mie ayam favorit mahasiswa dengan topping melimpah dan harga super terjangkau.',
+        features: ['🍜 Mie ayam', '🥢 Topping melimpah', '💸 Harga murah', '📍 Strategis'],
+        reviews: ['"Mie ayamnya nagih"', '"Porsi pas banget"', '"Worth it banget"']
+      },
+      {
+        name: 'Pakde Saijo',
+        img: 'https://www.google.com/imgres?q=pakde%20saijo&imgurl=https%3A%2F%2Flookaside.instagram.com%2Fseo%2Fgoogle_widget%2Fcrawler%2F%3Fmedia_id%3D2311079934209500939&imgrefurl=https%3A%2F%2Fwww.instagram.com%2Fp%2FCASmvSeFycL%2F&docid=TRelvYT2-LqV5M&tbnid=zsYjZqguM-l3ZM&vet=12ahUKEwiOgP68kP6TAxUJUGcHHfndNNwQnPAOegQIHxAB..i&w=1440&h=1440&hcb=2&ved=2ahUKEwiOgP68kP6TAxUJUGcHHfndNNwQnPAOegQIHxABNasi',
+        address: 'Jl. Simpang Darmo, Dukuh Pakis, Surabaya Barat',
+        jam: '12.00 – 22.00 WIB',
+        price: 'Rp 15.000 – Rp 18.000',
+        rating: 3,
+        ratingText: '3.7/5',
+        desc: 'Warung sederhana dengan konsep gerobak ini punya bumbu rahasia khas yang bikin ayam cincangnya berwarna merah kecoklatan, gurih, dan harum menggoda begitu masuk wajan panas.',
+        features: ['🍽️ Nasi ayam enak', '🍗 ayamnya harum', '💸 Harga murah', '📍 Strategis'],
+        reviews: ['"Mie ayamnya nagih"', '"Porsi pas banget"', '"Worth it banget"']
+      },
+      {
+        name: 'Bakso BEM',
+        img: 'https://lh3.googleusercontent.com/gps-cs-s/APNQkAHL8cx6EBkhxZigxj6GckOZRe7PK1HzuVqnb8xAWvwBnAIfM_yAKsXMUTiGJz03TDCWbY2G1zLMezJddlNnxSpD4LuGdhaM-fuyErekvi9xdn0MxQUklBlNBObRgl5i_PHH50YT=s1360-w1360-h1020-rw',
+        address: 'Jl. Gebang Lor No.105, Gebang Putih, Surabaya',
+        jam: 'Setiap hari',
+        price: 'Rp 8.000 – Rp 20.000',
+        rating: 4,
+        ratingText: '4.5/5',
+        desc: 'Bakso dan mie ayam legendaris dekat kampus dengan kuah gurih dan harga mahasiswa.',
+        features: ['🍲 Kuah gurih', '🥩 Pentol kenyal', '⚡ Pelayanan cepat', '👨‍🎓 Favorit mahasiswa'],
+        reviews: ['"Baksonya mantap"', '"Murah banget"', '"Selalu ramai"']
+      },
+      {
+        name: 'Sate Ayam 35 Bu IIS',
+        img: 'https://i0.wp.com/i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/11429751-d812-450f-9902-b375d48d5ae0_Go-Biz_20220808_152840.jpeg',
+        address: 'Jl. Gebang Lor (depan Makam Gebang Lor), Gebang Putih, Kec. Sukolilo, Surabaya, Jawa Timur',
+        jam: 'Setiap hari',
+        price: 'Rp 10.000 – Rp 15.000',
+        rating: 0,
+        ratingText: '-',
+        desc: 'Sate Ayam dengan bumbu kacang yang gurih dan daging yang empuk dengan harga yang bikin senyum lebar',
+        features: ['🍗 Daging empuk', '🥜 Bumbu kacang gurih'],
+        reviews: ['Belum ada review']
+      },
+      {
+        name: 'Ayam Geprek Joder Ka Dhani',
+        img: 'https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/1b46bd86-a82b-4ac1-ac3e-8e416b5796de_Go-Food-Merchant_20260121_005317.jpeg',
+        address: 'Pusat – Gebang Lor (dekat ITS) Jl. Gebang Lor No.32A, Gebang Putih, Sukolilo, Surabaya',
+        jam: '06.00-23.00 WIB',
+        price: 'Rp 13.000 – Rp 21.000',
+        rating: 3,
+        ratingText: '3.3/5',
+        desc: 'Ayam crispy boneless-nya beneran di-geprek sampai hancur, kulitnya super renyah, dan sambalnya hadir dalam berbagai pilihan saus kekinian',
+        features: ['🍗 Ayam crispy', '🥓 Kulit renyah', '🥫 Saus banyak pilihan'],
+        reviews: ['"Harga ayam gepreknya terjangkau"', '"Harga sangat terjangkau untuk mahasiswa dan rasanya juga enak"', '"Semua menu enak"']
+      },
+      {
+        name: 'Ketoprak 25 Jakarta',
+        img: 'https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/e24db644-2385-4370-9208-984b2226a606_Go-Biz_20210808_235700.jpeg?h=636&w=1082&fit=crop&auto=compress',
+        address: 'Jl. Keputih Tegal No.20, Keputih, Kec. Sukolilo, Surabaya, Jawa Timur (emperan Warung Bebek Cabang Purnama)',
+        jam: '07.00-16.00 WIB',
+        price: 'Rp 11.000 – Rp 13.000',
+        rating: 4,
+        ratingText: '4.5/5',
+        desc: 'Perpaduan lontong, tahu goreng, bihun, tauge, dan timun yang disiram bumbu kacang gurih manis hasil ulekan langsung di atas piring setiap ada pesanan',
+        features: ['🍽️ Dibuat dadakan', '🥜 Bumbu kacang gurih'],
+        reviews: ['"Rasanya mantab"', '"The best ketoprak in Surabaya"', '"Bumbunya mantap banget"']
+      },
+      {
+        name: 'Warung Makan Tegal Citra Baru',
+        img: 'https://lh3.googleusercontent.com/gps-cs-s/APNQkAHkxsxCtaZp7eh27X2GX-2fCjTjxoQhSaGJ83BEj90QJFO8pDEQmrFQO1e46tHb6z6ZFYGg6zkXRe0InN1ATq11PS_phLbu4XQwMc2Fco61PhLRrtCse2zE7msOkVAyHU6WMz8I=s1360-w1360-h1020-rw',
+        address: 'Jl. Gebang Lor No.102, Gebang Putih, Kec. Sukolilo, Surabaya, Jawa Timur 60117',
+        jam: '24 Jam',
+        price: 'Rp 8.000 – Rp 19.000',
+        rating: 4,
+        ratingText: '4.5/5',
+        desc: 'Dengan konsep ambil sendiri ala warteg, kamu bebas pilih lauk dan sayur sesuai selera dan budget',
+        features: ['💰 Harga Bersahabat', '🫓 Gratis kerupuk'],
+        reviews: ['"Gaada Libur!"', '"Cocok buat lapar tengah malam"', '"Suasana nyaman"']
+      },
+      {
+        name: 'Ramen Kampus',
+        img: 'https://lh3.googleusercontent.com/gps-cs-s/APNQkAFJ8XkH9fWpqJBLaf6M0Ua9BGmfUp6OXSZyoHwm5g35SRJ8Dsy2pxkTkVowrcnGc5gnfL_2sDs1OLNfmSaHMlKPVtdYhfg0oCeNB3r9ttrVqibsSI9Cl0YQaz8TDLHacPjqynCuyg=s1360-w1360-h1020-rw',
+        address: 'Jl. Keputih Perintis I No.1, Keputih, Kec. Sukolilo, Surabaya, Jawa Timur',
+        jam: '13.30-22.00 WIB (Senin-Sabtu)',
+        price: 'Rp 21.000 – Rp 51.000',
+        rating: 4,
+        ratingText: '4.9/5',
+        desc: 'Ramen brisket pertama di Surabaya daging brisket yang diasap selama 14–16 jam menghasilkan tekstur super lembut dengan aroma smoky yang menggoda',
+        features: ['🥩 Daging smoky', '🍲 Kuah Creamy', '💰 Harga terjangkau'],
+        reviews: ['"Pelayanan cepat"', '"Penjual ramah"', '"Daging enak"']
+      },
+      {
+        name: 'Warteg Aero',
+        img: 'https://lh3.googleusercontent.com/gps-cs-s/APNQkAEiP2IclI6UCbJjCqf9Y78aFq4GQXMLGWUPjebmHnB7VIuW6CAaAQUoxEdh4-jJojfQcD9RCFsHmkDK0u7xnw_DUHEZb0JMvqT18i8tj5Cm9N6OxI_R4qm5gvtvDAw5YZ6aVGWw=s1360-w1360-h1020-rw',
+        address: 'Jl. Raya Mulyosari No.4, Kalisari, Kec. Mulyorejo, Surabaya',
+        jam: '24 Jam (Setiap hari)',
+        price: 'Rp 8.000 – Rp 15.000',
+        rating: 4,
+        ratingText: '4.4/5',
+        desc: 'Warteg fenomenal di Surabaya yang jadi andalan mahasiswa karena harga super hemat, lauk rumahan lengkap, dan buka nonstop 24 jam.',
+        features: ['🍛 Lauk rumahan lengkap', '⏰ Buka 24 jam', '💸 Super hemat', '📦 Bisa order online', '👨‍🎓 Favorit mahasiswa'],
+        reviews: ['"Murah, enak, dan selalu buka kapanpun dibutuhkan"', '"Pilihan lauk banyak banget, rasanya rumahan"', '"Penyelamat anak kos tengah malam"']
+      },
+      {
+        name: 'Ayam Geprek Maszeh',
+        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSbgv1jYJYMgzLcz73wl1IueZthYExZZ_WfA&s',
+        address: 'Jl. Gebang Lor No.29, Sukolilo, Surabaya',
+        jam: '24 Jam (Setiap hari)',
+        price: 'Mulai Rp 11.000',
+        rating: 3,
+        ratingText: '3.6/5',
+        desc: 'Ayam geprek unik dengan pilihan bumbu rendang dan bumbu bebek, menawarkan sensasi rasa berbeda dengan harga sangat terjangkau.',
+        features: ['🍗 Ayam crispy', '🌶️ Pilihan bumbu unik', '🥤 Free es teh', '⏰ Buka 24 jam', '📱 Tersedia delivery'],
+        reviews: ['"Bumbunya beda dari geprek lain, wajib coba rendangnya"', '"Murah banget sudah dapat es teh gratis"', '"Cocok buat makan malam atau begadang"']
+      }
+    ]
+  },
+  Cafe: {
+    title: 'Nongkrong Murah Berkualitas',
+    subtitle: 'Tempat cozy dengan harga yang tetap bersahabat.',
+    places: [
+      {
+        name: 'Choky Spaghetti & Coffee',
+        img: 'https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/a41b23e7-2d18-47c3-a04d-471659deca5a_Go-Biz_20231209_090035.jpeg',
+        address: 'Jl. Keputih Tegal I No.27, Keputih, Kec. Sukolilo, Surabaya',
+        jam: '10.00 – 22.00 WIB',
+        price: 'Rp 25.000 – Rp 50.000',
+        rating: 4,
+        ratingText: '4.4/5',
+        desc: 'Spot makan santai dekat ITS dengan menu spaghetti favorit mahasiswa dan suasana nyaman untuk diskusi ringan.',
+        features: ['🍝 Menu spaghetti variatif', '📍 Dekat kampus', '🪑 Tempat santai', '💸 Harga terjangkau'],
+        reviews: ['"Spaghettinya enak dan worth it"', '"Dekat kampus jadi sering ke sini"', '"Cocok buat nongkrong santai"']
+      },
+      {
+        name: 'ESKRIMO COFFEE Parkir Trotoar',
+        img: 'https://lh3.googleusercontent.com/gps-cs-s/APNQkAHMhCzBNWWHrMAUH6WqaTR9Ka6OnQUXy_gRS8yTZrAkDH4uhhBmrx02c_J8bitpGyc0gfrOLFjOglAd8NWXnS9WAwJquFfX04IKDLjiC6AeCO0owsKt_TD4yPEYv3FRhwkQVgWLfBA1gmgb=s1360-w1360-h1020-rw',
+        address: 'Jl. Dharmawangsa No.124, Airlangga, Kec. Gubeng, Surabaya',
+        jam: '08.00 – 24.00 WIB',
+        price: 'Rp 18.000 – Rp 30.000',
+        rating: 4,
+        ratingText: '4.5/5',
+        desc: 'Cafe populer dekat UNAIR dengan area indoor-outdoor yang nyaman untuk nongkrong atau nugas ringan.',
+        features: ['☕ Kopi & non-coffee', '🌙 Buka sampai malam', '🌿 Indoor & outdoor', '👨‍🎓 Favorit mahasiswa'],
+        reviews: ['"Tempatnya nyaman banget"', '"Pilihan minumannya lengkap"', '"Cocok buat nongkrong lama"']
+      },
+      {
+        name: 'Time Coffee',
+        img: 'https://lh3.googleusercontent.com/p/AF1QipPzqaBP-2yigYkKRmbXE7i5iaa5cwTlkqW0Namu=s1360-w1360-h1020-rw',
+        address: 'Jl. Ketintang Selatan No.63, Karah, Kec. Jambangan, Surabaya',
+        jam: '13.00 – malam',
+        price: 'Rp 20.000 – Rp 35.000',
+        rating: 4,
+        ratingText: '4.3/5',
+        desc: 'Kedai kopi santai di Surabaya Selatan yang pas untuk nongkrong ringan tanpa suasana terlalu formal.',
+        features: ['☕ Coffee shop', '📍 Lokasi strategis', '🛋️ Nyaman santai', '💸 Ramah mahasiswa'],
+        reviews: ['"Nyaman buat ngobrol"', '"Kopinya oke"', '"Harga masih aman di kantong"']
+      },
+      {
+        name: 'Utokopia Coffee',
+        img: 'https://lh3.googleusercontent.com/gps-cs-s/APNQkAHF7-roAtSF00y5Xb2cUK9ENfMwjBX7925U86p8lhkUhCkLJmrfSNq_Quz9bS2WnsxWVarfP_sN7e0YfxioF7kyZjVtb_3sK6Mrm5vbhiJ3bmPPM_b9EV2xMVoFOkyn1P9fdRsq=s1360-w1360-h1020-rw',
+        address: 'Jl. Dharmawangsa No.77, Airlangga, Kec. Gubeng, Surabaya',
+        jam: '09.00 – 00.00 WIB',
+        price: 'Rp 20.000 – Rp 35.000',
+        rating: 4,
+        ratingText: '4.6/5',
+        desc: 'Hidden gem coffee shop dengan vibes tenang untuk work from cafe atau nongkrong santai.',
+        features: ['☕ Specialty coffee', '🤫 Hidden gem', '🪑 Cozy vibes', '📍 Dekat UNAIR'],
+        reviews: ['"Tempat kecil tapi nyaman"', '"Kopinya enak"', '"Vibes-nya tenang"']
+      },
+      {
+        name: 'District 51 Coffee',
+        img: 'https://lh3.googleusercontent.com/gps-cs-s/APNQkAEYD1jXGFdAutZM9ComN8KMAipDfdjBuz4gfsGU0-6hZyKF1Chnh1JRh89_0vTEhGRdmZcebocfTSV6sbP85iNWVODPMEWCxwPzsDoOnmsoRHXUGMv9CcoeTN0sn9n8DXsNGqeV2A=s1360-w1360-h1020-rw',
+        address: 'Jl. Raya Tenggilis Mejoyo Blok AI-42C, Surabaya',
+        jam: '11.00 – 21.00 WIB',
+        price: 'Rp 12.000 – Rp 30.000',
+        rating: 4,
+        ratingText: '4.5/5',
+        desc: 'Cafe semi-industrial yang underrated dengan menu terjangkau dan suasana nyaman.',
+        features: ['🏭 Semi-industrial', '💸 Budget friendly', '☕ Kopi & non-coffee', '📚 Cocok nugas'],
+        reviews: ['"Tempatnya adem"', '"Minuman worth it"', '"Enak buat duduk lama"']
+      },
+      {
+        name: 'Dee Aksara',
+        img: 'https://lh3.googleusercontent.com/gps-cs-s/APNQkAGbkfyEIs98X70Vj17YLwEk0Shid0emM2DyE_Sqox_17II9Z8iACAs7ChzfrfCxRi4ip2Il117C8WKLv4m7lg1RDQk3mVp5e0ugmVO9K-TssNK22moqTZiku87zWuAp2csWXqveRl7epDyt=s1360-w1360-h1020-rw',
+        address: 'Jl. Ketintang Selatan No.47, Karah, Kec. Jambangan, Surabaya',
+        jam: '10.00 – 22.00 WIB',
+        price: 'Rp 10.000 – Rp 25.000',
+        rating: 4,
+        ratingText: '4.7/5',
+        desc: 'Kedai kopi sederhana dengan harga super ramah kantong dan suasana santai.',
+        features: ['☕ Harga murah', '🪑 Cozy sederhana', '📍 Strategis', '💸 Mahasiswa friendly'],
+        reviews: ['"Murah tapi enak"', '"Tempat nyaman buat santai"', '"Worth it banget"']
+      }
+    ]
+  },
+  NongkiNonstop: {
+    title: 'Teman Nongkrong Sampai Dini Hari',
+    subtitle: 'Cafe & warkop fleksibel untuk nugas, nongkrong, atau kerja kapan saja.',
+    places: [
+      {
+        name: 'Kedai Kaladulu',
+        img: 'https://lh3.googleusercontent.com/gps-cs-s/APNQkAEqKYuX9eG0kwH8U0bbTC721OG0oPIPabwjuuRtZYyuLNMCZr4PSLCXZQ8pwCg_3SDyIyZdwFTpf-U2IE97HO3i0jKPjwGWdFynus25w0E2k_bsRY9kniGbMVzXpHxoNcd4Fk5y=s1360-w1360-h1020-rw',
+        address: 'Jl. Raya Dharma Husada Indah No.D-16, Mulyorejo, Surabaya',
+        jam: '24 Jam',
+        price: 'Rp 15.000 – Rp 30.000',
+        rating: 4,
+        ratingText: '4.5/5',
+        desc: 'Cafe nyaman untuk nugas lama dengan suasana tenang, colokan tersedia, dan menu ramah kantong.',
+        features: ['☕ Coffee & snack', '🔌 Ada colokan', '📶 Wifi tersedia', '⏰ 24 jam'],
+        reviews: ['"Nyaman buat kerja lama"', '"Tempatnya adem dan santai"', '"Pilihan menu oke"']
+      },
+      {
+        name: 'Rene Cafe',
+        img: 'https://lh3.googleusercontent.com/p/AF1QipOpQ7FbWUHXQfIjm6xvX3hoj_YAM7fsOYDfj-OL=s1360-w1360-h1020-rw',
+        address: 'Jl. Ngagel No.133, Wonokromo, Surabaya',
+        jam: 'Hingga malam',
+        price: 'Rp 20.000 – Rp 30.000',
+        rating: 4,
+        ratingText: '4.4/5',
+        desc: 'Cafe cozy untuk kerja individu maupun diskusi kecil dengan suasana nyaman.',
+        features: ['☕ Cafe vibes', '🪑 Tempat nyaman', '📶 Wifi', '💸 Budget aman'],
+        reviews: ['"Cocok buat ngobrol"', '"Nyaman untuk nugas"', '"Minuman enak"']
+      },
+      {
+        name: 'Warkop Goeboeg 99',
+        img: 'https://lh3.googleusercontent.com/grass-cs/ANxoTn1XpTGr480RJ6PvF-RLs9EZumYtPjo1ay3ZJtuWDhPbQLdYu6fh3pbSZPzy1dfn7R_7PCpjc-M8T0PZCQv7-nLADhJUsBRdrlOW698u3cfJT7M8KpZfoxHrjjczFaxFwOUUzp8g=s1360-w1360-h1020-rw',
+        address: 'Jl. Arief Rahman Hakim No.23, Keputih, Surabaya',
+        jam: '24 Jam / hingga 03.00',
+        price: 'Rp 1.000 – Rp 25.000',
+        rating: 4,
+        ratingText: '4.3/5',
+        desc: 'Warkop santai dekat kampus dengan harga super hemat dan suasana terbuka.',
+        features: ['🍜 Menu sederhana', '💸 Super murah', '📍 Dekat kampus', '🌙 Sampai dini hari'],
+        reviews: ['"Murah meriah"', '"Enak buat diskusi"', '"Favorit anak kos"']
+      },
+      {
+        name: 'Kopi Nako Daur Baur',
+        img: 'https://lh3.googleusercontent.com/grass-cs/ANxoTn0PokR_YGFJn8cNZD9mfImSJvcbmpQDijqNdKqwRNlwsGj76mB6EFck5DWBMzYn3th7ANYigSxD69WxorUM_AHPQp-9b4M5Zf9Qm-OtxHHt7YYcA0Xl4bmJqV2ozSY-wlYSAaQNPW4mChHJ=w289-h312-n-k-no',
+        address: 'Jl. Raya Gubeng No.98, Gubeng, Surabaya',
+        jam: '24 Jam',
+        price: 'Rp 20.000 – Rp 50.000',
+        rating: 4,
+        ratingText: '4.6/5',
+        desc: 'Cafe modern luas dengan area nyaman untuk kerja dan nongkrong kapan saja.',
+        features: ['☕ Modern cafe', '🏡 Indoor & semi-outdoor', '⏰ 24 jam', '📶 Wifi'],
+        reviews: ['"Tempat luas"', '"Nyaman buat laptopan"', '"Kopi oke"']
+      },
+      {
+        name: 'Bestree Cafe',
+        img: 'https://lh3.googleusercontent.com/gps-cs-s/APNQkAEbe9tQ3afYQbRQxK6OLNxOml9AG6qIgWD6YoheHrjTvxGeTiaFdCluV1xG5F7mUPozqwFwyw9tS5BUyjRKF_Kl7p1qPCb7PnLzUOrcyss4hTHQ80U-CazLzY9TJBc0VZXAByQllQ=s1360-w1360-h1020-rw',
+        address: 'Jl. Raya Manyar No.33, Menur Pumpungan, Surabaya',
+        jam: 'Setiap hari',
+        price: 'Rp 20.000 – Rp 35.000',
+        rating: 4,
+        ratingText: '4.5/5',
+        desc: 'Cafe modern dengan suasana tenang dan cocok untuk kerja santai.',
+        features: ['☕ Coffee shop', '📶 Wifi', '🪑 Nyaman', '💸 Terjangkau'],
+        reviews: ['"Enak buat duduk lama"', '"Tempatnya tenang"', '"Worth it"']
+      },
+      {
+        name: 'ARAH Coffee',
+        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZbtGiEs5aucxqm9IsI8iKYQeJQF3vkZlnbA&s',
+        address: 'Jl. Kertajaya No.107, Surabaya',
+        jam: '24 Jam',
+        price: 'Rp 20.000 – Rp 50.000',
+        rating: 4,
+        ratingText: '4.6/5',
+        desc: 'Cafe 24 jam dengan desain modern dan menu lengkap untuk nongkrong fleksibel.',
+        features: ['☕ Specialty drinks', '🥐 Pastry', '⏰ 24 jam', '📶 Wifi'],
+        reviews: ['"Tempat luas"', '"Cocok buat malam"', '"Pilihan menu banyak"']
+      },
+      {
+        name: 'Toko Kopi Tiada Tara',
+        img: 'https://lh3.googleusercontent.com/grass-cs/ANxoTn1mkZTS8NRoRL4QMtUqZOW6f_v6A032RnAnCfTZ-g2kXt6TCRY_gfyUYXcDaUZ3_y9TGL4q4_0AeLdiDGqdOvhKkPG5ephUZrHxjKCw4SHwxNiOwsQT5xVBU-Jypmh2UbnLWo1n2Xyu8Qk=w289-h156-n-k-no',
+        address: 'Jl. Kalibokor Selatan No.172, Gubeng, Surabaya',
+        jam: '24 Jam',
+        price: 'Rp 25.000 – Rp 50.000',
+        rating: 4,
+        ratingText: '4.4/5',
+        desc: 'Cafe lawas ala kopitiam dengan vibes santai untuk nongkrong malam.',
+        features: ['☕ Kopitiam vibes', '🌙 24 jam', '📶 Wifi', '🍞 Snack & dimsum'],
+        reviews: ['"Konsep unik"', '"Nyaman buat ngobrol"', '"Minumannya enak"']
+      },
+      {
+        name: 'De-Javu Cafe and Eatery',
+        img: 'https://www.rumah123.com/seo-cms/assets/large_De_Javu_87518a6872/large_De_Javu_87518a6872.jpg',
+        address: 'Jl. Ngagel Jaya Selatan No.33, Surabaya',
+        jam: 'Hingga dini hari',
+        price: 'Rp 8.000 – Rp 45.000',
+        rating: 4,
+        ratingText: '4.3/5',
+        desc: 'Cafe ramai untuk nobar, nongkrong, dan diskusi santai sampai malam.',
+        features: ['📺 Nobar', '🍽️ Menu lengkap', '🌙 Sampai dini hari', '🪑 Area luas'],
+        reviews: ['"Seru buat rame-rame"', '"Tempat luas"', '"Menu cukup lengkap"']
+      },
+      {
+        name: 'Titik Kumpul Surabaya',
+        img: 'https://www.rumah123.com/seo-cms/assets/large_titik_kumpul_f0f471c59e/large_titik_kumpul_f0f471c59e.jpg',
+        address: 'Jl. Dukuh Kupang Utara I No.1, Surabaya',
+        jam: '24 Jam',
+        price: 'Rp 4.000 – Rp 20.000',
+        rating: 4,
+        ratingText: '4.4/5',
+        desc: 'Tempat nongkrong murah meriah dengan konsep semi outdoor yang santai.',
+        features: ['🌿 Semi outdoor', '💸 Super hemat', '⏰ 24 jam', '👥 Buat rame-rame'],
+        reviews: ['"Murah banget"', '"Enak buat kumpul"', '"Santai suasananya"']
+      },
+      {
+        name: 'FamilyMart 24 Jam',
+        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdB0E70oEdLoCzBQ6u-jn4LA9wOhzFEiFB9w&s',
+        address: 'Jl. Tunjungan No.33, Surabaya',
+        jam: '24 Jam',
+        price: 'Rp 10.000 – Rp 30.000',
+        rating: 4,
+        ratingText: '4.3/5',
+        desc: 'Convenience store dengan area duduk yang cocok untuk kerja singkat.',
+        features: ['🏪 Practical stop', '☕ Coffee', '🌙 24 jam', '💸 Terjangkau'],
+        reviews: ['"Praktis buat singgah"', '"Kopi lumayan"', '"Nyaman buat sebentar"']
+      },
+      {
+        name: 'Point Coffee',
+        img: 'https://www.rumah123.com/seo-cms/assets/large_Point_Coffee_ec89031628/large_Point_Coffee_ec89031628.jpg',
+        address: 'Indomaret Point Tunjungan 62, Surabaya',
+        jam: '24 Jam',
+        price: 'Rp 10.000 – Rp 20.000',
+        rating: 4,
+        ratingText: '4.2/5',
+        desc: 'Alternatif kopi murah untuk kerja singkat atau istirahat malam.',
+        features: ['☕ Budget coffee', '🏪 Praktis', '⏰ 24 jam', '💸 Murah'],
+        reviews: ['"Harga bersahabat"', '"Cepat dan praktis"', '"Lumayan buat singgah"']
+      }
+    ]
+  },
+  Wisata: {
+  title: 'Healing Murmer Surabaya',
+  subtitle: 'Tempat wisata keren dengan tiket terjangkau atau bahkan gratis!',
+  places: [
+    {
+      name: 'Taman Grand Harvest - Harvestory Park',
+      img: 'https://cms.portaljtv.com/assets/upload-gambar/jtv_1738755540.jpg',
+      address: 'Balas Klumprik, Kec. Wiyung, Surabaya, Jawa Timur 60222',
+      jam: '06.00 – 22.00 WIB',
+      price: 'GRATIS',
+      rating: 4,
+      ratingText: '4.6/5',
+      desc: 'Taman modern gratis di Surabaya Barat dengan area hijau luas, danau kecil, dan spot foto estetik.',
+      features: ['🌿 Taman hijau luas', '📸 Instagramable', '🚲 Jalur sepeda', '💰 Gratis'],
+      reviews: ['"Cocok buat nongki & cari suasana segar"', '"Banyak jajanan dari makanan sampai kopi"', '"Tempat santai favorit di Surabaya Barat"']
+    },
+    {
+      name: 'Taman Angsa',
+      img: 'https://lh3.googleusercontent.com/gps-cs-s/APNQkAHLp7mtY8fTJZvtANWiTw61sbjAGIE9gyY0zKJj3RPjv-jvNX00TCtSgjx_9lt4b1EoU5utG949qeFC4mx8N9cXRxISPQMkgmogyMrKHVGO5ngxU-IDV_U_vjwCGRR0MHQEUJ0y=s1360-w1360-h1020-rw',
+      address: 'Jl. Pakuwon Indah Lontar Timur, Lakarsantri, Surabaya',
+      jam: 'Pagi & sore',
+      price: 'GRATIS',
+      rating: 4,
+      ratingText: '4.5/5',
+      desc: 'Taman gratis dengan vibes ala luar negeri, lengkap dengan danau dan ikon angsa.',
+      features: ['🦢 Danau angsa', '🌳 Hijau & bersih', '📸 Spot aesthetic', '💰 Gratis'],
+      reviews: ['"Vibes bagus, cocok buat santai"', '"Ikon angsa jadi daya tarik"', '"Tempatnya tenang"']
+    },
+    {
+      name: 'Graha Natura Park',
+      img: 'https://lh3.googleusercontent.com/gps-cs-s/APNQkAE85FI3b8humAllO6i69p3LTw288ZxtbccN6TTxZEQ84i51JyzrIo0oD4aAogHND3YUg4_IsYohQBnYliPYZoiw0mi1aUQEBL3hBiGh3YRiWfPma4-n3g_HkvGYJ7MXq6MIWehW=s1360-w1360-h1020-rw',
+      address: 'Jl. Graha Natura, Lontar, Sambikerep, Surabaya',
+      jam: '06.00 – 10.00 & 15.00 – 17.30 WIB',
+      price: 'GRATIS',
+      rating: 4,
+      ratingText: '4.6/5',
+      desc: 'Taman hijau dengan view danau cantik, cocok untuk healing tipis tanpa biaya.',
+      features: ['🌅 View danau', '🌿 Hijau & asri', '📸 Spot foto', '💰 Gratis'],
+      reviews: ['"Tempatnya bagus buat jalan pagi"', '"Akses agak terbatas tapi worth it"', '"View danau keren"']
+    },
+    {
+      name: 'Taman Tugu Pahlawan',
+      img: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhYFaOZ818VGmiya4ZsXl_GuJ3Cg95CM__4f1NrvmiZceL2f6xldvphJAGEOYrH3Sele4ZxaoFBxWCArjx3prNAITis-mEzP8-kCfu0aETpo8DD6feFEypiel5BkNO5JkIJY-EKKVrfTJY/s1600/IMG_20170910_125810.jpg',
+      address: 'Jl. Tembaan, Bubutan, Surabaya',
+      jam: '08.00 – 18.00 WIB',
+      price: 'GRATIS',
+      rating: 4,
+      ratingText: '4.7/5',
+      desc: 'Ikon sejarah Surabaya dengan taman luas dan museum yang edukatif.',
+      features: ['🏛️ Monumen ikonik', '🌳 Taman luas', '📚 Edukatif', '💰 Gratis'],
+      reviews: ['"Tempat bersejarah wajib dikunjungi"', '"Area taman luas"', '"Nyaman untuk santai"']
+    },
+    {
+      name: 'Park Shanghai - Pakuwon City',
+      img: 'https://lh3.googleusercontent.com/gps-cs-s/APNQkAF_xGvUDlkKzJl7isG8CoZEmuwbC2dzpS8Pf_dHbF9eWglXrL_-W1H4wm_GpgBaoej8EjqFi4Jagp_Q3X58C_z5WrZAAAgW9ljPk8D0naLtjjSt7_J5xRNLsE-mMGOcHjnrTSbt=s1360-w1360-h1020-rw',
+      address: 'Jl. Laguna Kejawan Putih Utara No.1, Mulyorejo, Surabaya',
+      jam: '10.00 – 22.00 WIB',
+      price: 'GRATIS',
+      rating: 4,
+      ratingText: '4.6/5',
+      desc: 'Spot wisata estetik bertema Chinatown dengan vibes Shanghai yang unik.',
+      features: ['🏮 Chinatown vibes', '📸 Spot foto', '🍜 Kuliner', '💰 Gratis'],
+      reviews: ['"Estetik banget buat foto"', '"Gratis masuk"', '"Tempat hangout seru"']
+    },
+    {
+      name: 'Taman Flora',
+      img: 'https://lh3.googleusercontent.com/gps-cs-s/APNQkAHR2gUyxtE9Ikc7_qJetBGzInKKyhWNI7I--rCGl7Y6F0AgVBeR0P-v7nO3JjWIgdPFH27Eh0v98cPSDef1mfAE1QfBbLAy0O61cXyCqJkkl9EazoRcvdeJaea2fhUApTn0_UtRyg=s1360-w1360-h1020-rw',
+      address: 'Jl. Raya Bratang Binangun, Gubeng, Surabaya',
+      jam: '07.00 – 17.00 WIB',
+      price: 'GRATIS',
+      rating: 4,
+      ratingText: '4.6/5',
+      desc: 'Taman edukatif dengan rusa, kolam ikan, dan area bermain keluarga.',
+      features: ['🦌 Area rusa', '🌴 Kebun tropis', '🛝 Playground', '💰 Gratis'],
+      reviews: ['"Ada rusa dan kolam ikan"', '"Tempat adem"', '"Cocok buat keluarga"']
+    },
+    {
+      name: 'Museum Bawah Tanah Alun-Alun Surabaya',
+      img: 'https://linguistik.upnjatim.ac.id/dalamkata/wp-content/uploads/sites/4/2024/10/bawah-tanah.jpg',
+      address: 'Jl. Gubernur Suryo No.15, Genteng, Surabaya',
+      jam: '09.00 – 21.00 WIB',
+      price: 'GRATIS',
+      rating: 4,
+      ratingText: '4.7/5',
+      desc: 'Museum modern bawah tanah dengan nuansa aesthetic dan edukatif.',
+      features: ['🏛️ Indoor', '🖼️ Galeri seni', '❄️ Adem', '💰 Gratis'],
+      reviews: ['"Tempatnya aesthetic"', '"Nyaman dan modern"', '"Cocok buat belajar sejarah"']
+    },
+    {
+      name: 'Kota Lama Surabaya',
+      img: 'https://static.tripzilla.id/media/257726/conversions/7f6e162c-b8e4-446a-a535-a2fce74feaac-w768.webp',
+      address: 'Jl. Rajawali – Jl. Jembatan Merah, Surabaya',
+      jam: '24 Jam',
+      price: 'GRATIS',
+      rating: 4,
+      ratingText: '4.6/5',
+      desc: 'Kawasan heritage dengan bangunan kolonial dan spot city walk klasik.',
+      features: ['🏚️ Heritage vibes', '📸 Vintage spot', '🚶 City walk', '💰 Gratis'],
+      reviews: ['"Spot foto bagus"', '"Wajib ke Gedung Internatio"', '"Klasik banget"']
+    },
+    {
+      name: 'Museum Surabaya (Gedung Siola)',
+      img: 'https://lh3.googleusercontent.com/gps-cs-s/APNQkAEpTi0xDt-427aG6m_oJln1r0F2d3FADkdvEN6zkdz0kA71cI6GMpRZ615CeQdznAzJK83M25Gj7hyDqPdLA6duI8luhhjE4Vsm6SHejcSmrFsGfMNGU2rejcxORJUDiVQu-Ej29vPii1Q=s1360-w1360-h1020-rw',
+      address: 'Jl. Tunjungan No.1, Genteng, Surabaya',
+      jam: '08.00 – 15.00 WIB',
+      price: 'GRATIS',
+      rating: 4,
+      ratingText: '4.5/5',
+      desc: 'Museum kota dengan koleksi sejarah Surabaya dari masa ke masa.',
+      features: ['📜 Sejarah kota', '🏛️ Gedung ikonik', '❄️ Indoor', '💰 Gratis'],
+      reviews: ['"Informatif dan menarik"', '"Warga Surabaya wajib mampir"', '"Mini museum yang worth it"']
+    },
+    {
+      name: 'Kampung Heritage Lawang Seketeng',
+      img: 'https://lh3.googleusercontent.com/gps-cs-s/APNQkAHebW31Z3-5zspZR6uTiGfuMG77XGio2gvS8gd1C1q-vNntoodvfSgVOqSydQpJC7VHHqHQer6e55LbfPt6f52E7icVSDX0vGN-J61czeQXBoe96Bwg-oE6K_rBX9NxS7V1EmI5qw31pNo=s1360-w1360-h1020-rw',
+      address: 'Jl. Lawang Seketeng Gg. 1, Peneleh, Surabaya',
+      jam: '08.00 – 17.00 WIB',
+      price: 'GRATIS',
+      rating: 4,
+      ratingText: '4.4/5',
+      desc: 'Kawasan heritage dengan nuansa kampung tua dan bangunan bersejarah.',
+      features: ['🏚️ Kampung tua', '📸 Spot vintage', '🏛️ Nilai sejarah', '💰 Gratis'],
+      reviews: ['"Unik dan penuh cerita"', '"Banyak spot wisata gratis"', '"Cocok buat eksplor santai"']
+    }
+  ]
+},
+  FashionCewek: {
+    title: 'Fashion Cewek on Budget',
+    subtitle: 'Tampil kece dan kekinian tanpa harus boncos!',
+    places: [
+      {
+        name: 'Rubylicious',
+        img: 'https://lh3.googleusercontent.com/gps-cs-s/APNQkAFgT0Vnypc-9I_4VrU0yHZu8Yta4tXr8_mQlWzzJOBMfMvvoGp0F6IhIAeGc9O06cbGJ-8oCZLAkE_PO3im--FyYRYKQLxkBwwN8Im9M2KHuD7abni_FE4UCrBRXksN_oGywuyr=s1360-w1360-h1020-rw',
+        address: 'Surabaya',
+        jam: 'Setiap hari',
+        price: 'Rp 50.000 – Rp 150.000',
+        rating: 4,
+        ratingText: '4.5/5',
+        desc: 'Toko fashion wanita dengan koleksi kekinian dan harga terjangkau. Cocok untuk ootd sehari-hari maupun acara.',
+        features: ['👗 Koleksi kekinian', '💸 Harga terjangkau', '🎀 Model variatif', '📍 Mudah dijangkau'],
+        reviews: ['"Modelnya bagus-bagus"', '"Harga oke buat mahasiswi"', '"Sering ada diskon"']
+      },
+      {
+        name: 'Dafarin Production',
+        img: 'https://mms.img.susercontent.com/id-11134210-7ra0k-mc1lz7pzm86a06@resize_ss700x700',
+        address: 'Surabaya',
+        jam: 'Setiap hari',
+        price: 'Mulai Rp 50.000',
+        rating: 4,
+        ratingText: '4.4/5',
+        desc: 'Brand lokal fashion wanita dengan harga mulai 50 ribuan. Kualitas oke, desain simpel dan stylish.',
+        features: ['👗 Brand lokal', '💰 Mulai 50k', '✂️ Kualitas bagus', '🛒 Bisa online'],
+        reviews: ['"Kainnya nyaman"', '"Harga bersahabat"', '"Desain simpel tapi kece"']
+      },
+      {
+        name: 'OUTFITDAYS SURABAYA',
+        img: 'https://lh3.googleusercontent.com/p/AF1QipNiZY4BehZDtl0ThJzFmnlev-OxNerGT23_Cvai=s1360-w1360-h1020-rw',
+        address: 'Jl. Rungkut Asri Timur XVIII No.9, Medokan Ayu, Rungkut',
+        jam: 'Setiap hari',
+        price: 'Harga grosir terjangkau',
+        rating: 5,
+        ratingText: '5/5',
+        desc: 'Pusat grosir outfit lucu & murah. Kaos, hoodie, sweater, celana casual, tas, dan aksesori fashion lengkap.',
+        features: ['👗 Outfit lucu & aesthetic', '💸 Harga grosir', '🛍️ Pilihan lengkap', '📍 Area Rungkut'],
+        reviews: ['"Pelayanannya ramah banget, enak diajak konsultasi soal model dan ukuran."', '"Worth it banget buat belanja di sini."']
+      },
+      {
+        name: 'May Style',
+        img: 'https://lh3.googleusercontent.com/p/AF1QipNuxO0Z75dj63Ygs3zUejI3Krl31ooPmppLBoj7=s1360-w1360-h1020-rw',
+        address: 'Jl. Pacuan Kuda No.34A, Petemon, Sawahan',
+        jam: 'Setiap hari',
+        price: 'Ramah kantong',
+        rating: 5,
+        ratingText: '4.9/5',
+        desc: 'Brand fashion wanita trendy, simple, dan kekinian. Cocok untuk outfit kuliah, kerja, atau jalan santai.',
+        features: ['👗 Trendy & kekinian', '👖 Kemeja, jeans, rok', '🧕 Hijab & aksesori', '💼 Cocok kuliah & kerja'],
+        reviews: ['"Produk fashion wanita yang trendy, berkualitas, dan harga terjangkau."']
+      },
+      {
+        name: 'Cotton & Co',
+        img: 'https://lh3.googleusercontent.com/grass-cs/ANxoTn1irt_D_ls5sf_7Dzz8V9KutLcB80visN96EZaFE1PAJ9JYIKfofDlepaVNxFuicVYGkrw1LDewouLgQENhu-FXvw066tfIlhTzbu-iirI8N3dptRbzH8n3seyT4ifBdLxyElkMvGvhdkZL=s1360-w1360-h1020-rw',
+        address: 'Ruko Cloverville A11, Jl. Tambak Medokan Ayu, Surabaya',
+        jam: 'Setiap hari',
+        price: 'Affordable',
+        rating: 5,
+        ratingText: '4.7/5',
+        desc: 'Brand lokal Surabaya dengan outfit basic, knit, linen, dan one set. Minimalist fashion untuk daily wear.',
+        features: ['🧶 Knitwear & linen', '👗 One set outfit', '🎨 Aesthetic & minimalis', '🏪 3 cabang Surabaya'],
+        reviews: ['"Koleksi lengkap, sering jadi pusat utama brand ini."']
+      },
+      {
+        name: 'TCO',
+        img: 'https://lh3.googleusercontent.com/gps-cs-s/APNQkAGFwWVoK0qXjCZ1EWLqp59ryoF__c0oEoa_vx4ziiKPZMjyIUM4yijaBd8Flxm7JLpInXBqJCg59dcLy6k9dSdB8tJe_JdtBlKUgERVA8nO0Po2IF9XX1eOLJwYDCnhXtgYJseqDA=s1360-w1360-h1020-rw',
+        address: 'Jl. Bratang Gede No.89, Ngagelrejo, Wonokromo',
+        jam: 'Setiap hari',
+        price: 'Ramah anak muda',
+        rating: 5,
+        ratingText: '4.9/5',
+        desc: 'Outfit kekinian, simpel, dan cocok untuk daily wear. Suasana toko nyaman untuk memilih outfit dengan santai.',
+        features: ['👗 Outfit casual', '🧢 Streetwear simpel', '💸 Harga anak muda', '🏪 Suasana nyaman'],
+        reviews: ['"Cocok untuk outfit kuliah, hangout, atau aktivitas santai."']
+      },
+      {
+        name: 'Deliwafa Surabaya',
+        img: 'https://lh3.googleusercontent.com/gps-cs-s/APNQkAFvClVSS0tvOAN9QNU0VAI4Sic4xgkFBHHxvsSyFf0zOZhn-uVsNDib6hLsjz1S2_aYAuzeesX4VDmc2evKv_mAzljkj82jNJDT7lKnva3pLLsP5Dcf_l4KjTgbgNww9CZmJ6KfY4QOHqot=s1360-w1360-h1020-rw',
+        address: 'Jl. Nginden Semolo No.101, Menur Pumpungan, Sukolilo',
+        jam: 'Setiap hari',
+        price: 'Variatif & terjangkau',
+        rating: 4,
+        ratingText: '4.6/5',
+        desc: 'One-stop fashion & lifestyle store. Baju, sepatu, tas, hijab, aksesori, hingga kosmetik semua ada dalam satu tempat.',
+        features: ['👟 Sepatu & sandal', '👜 Tas & dompet', '🧕 Hijab & kosmetik', '🏪 2 cabang Surabaya'],
+        reviews: ['"Barang murah kualitas bagus"', '"Lengkap banget, dari baju sampai aksesoris semua ada"']
+      },
+      {
+        name: 'LOONY Flagship Store',
+        img: 'https://lh3.googleusercontent.com/gps-cs-s/APNQkAHD9MWzr72Ym8tz24-BAg7YRBHnwgJrP-sCxUZt419quHHN9EBZz0IA5I8mq__tS-0rzjMvmzQO-I4Zq0esgcyv8-nSpdRjL675TYqozMC83L7v64xdCxfDO9N2NGaM-UycXr8yfd6nNpJ-=s1360-w1360-h1020-rw',
+        address: 'Royal Plaza Lantai UG Blok F1 No.01-07, Wonokromo',
+        jam: 'Setiap hari',
+        price: 'Terjangkau',
+        rating: 5,
+        ratingText: '4.9/5',
+        desc: 'Brand lokal Indonesia sejak 2008. Fashion fun & expressive dengan outfit full pattern, warna cerah, dan desain playful.',
+        features: ['🌈 Full pattern & colorful', '👗 Dress & outer', '🎨 Desain unik & playful', '🏬 Royal Plaza'],
+        reviews: ['"Pelayanan bagus, banyak diskon, barang kekinian dan banyak pilihan."', '"Baju lucu-lucu semua dan pelayanannya ramah."']
+      }
+    ]
+  },
+  FashionCowok: {
+    title: 'Fashion Cowok on Budget',
+    subtitle: 'Upgrade penampilan tanpa harus merogoh kocek dalam-dalam!',
+    places: [
+      {
+        name: 'TCO',
+        img: 'https://lh3.googleusercontent.com/gps-cs-s/APNQkAGFwWVoK0qXjCZ1EWLqp59ryoF__c0oEoa_vx4ziiKPZMjyIUM4yijaBd8Flxm7JLpInXBqJCg59dcLy6k9dSdB8tJe_JdtBlKUgERVA8nO0Po2IF9XX1eOLJwYDCnhXtgYJseqDA=s1360-w1360-h1020-rw',
+        address: 'Surabaya',
+        jam: 'Setiap hari',
+        price: 'Rp 50.000 – Rp 150.000',
+        rating: 4,
+        ratingText: '4.4/5',
+        desc: 'Toko fashion pria dengan koleksi casual hingga semi-formal yang harganya tetap ramah di kantong mahasiswa.',
+        features: ['👕 Casual & semi-formal', '💸 Harga terjangkau', '🎽 Koleksi lengkap', '📍 Lokasi strategis'],
+        reviews: ['"Baju-bajunya kece"', '"Harga mahasiswaan"', '"Pilihan banyak"']
+      },
+      {
+        name: 'Cosmic',
+        img: 'https://lh3.googleusercontent.com/gps-cs-s/APNQkAGIE5q58T7c5skw6uLR9Hw3aGvZZiOKehd5sgnUAAboMLlyZAHEKAfwvXrN9opoQUBqs96ckfUkg2IX97PlhvDxUnY5tlZ6ORToUsCritw9306OvrhElQDdEwkbHy2cBbTENg0T=s1360-w1360-h1020-rw',
+        address: 'Jl. Kaca Piring No.6, Ketabang, Genteng',
+        jam: 'Setiap hari',
+        price: 'Terjangkau',
+        rating: 4,
+        ratingText: '4.4/5',
+        desc: 'Store fashion streetwear, casual, dan modern di area Qiubix Space. Cocok untuk gaya simple tapi tetap keren dan kekinian.',
+        features: ['🧢 Streetwear', '👕 Kaos & hoodie', '👖 Celana casual', '🏙️ Urban fashion'],
+        reviews: ['"Lokasi store ada di area Kaca Piring, dekat tempat hangout."', '"Koleksi cukup variatif untuk streetwear"']
+      },
+      {
+        name: 'THRIFLIX & HIMIN STORE',
+        img: 'https://lh3.googleusercontent.com/gps-cs-s/APNQkAGUS54AQ3gJXR2ZQEeZrGLm4QIg3VLWRqvhrYOwAKBGmJJSYAbdwIj1OndHFmgSF2CAcTYfrgAvuljzs0ue4LdauAC2kmkNVMj7lf0ph6RLH9HIpL-SjsTkm6hoD_SvgKYZ2I7Mcw=s1360-w1360-h1020-rw',
+        address: 'Jl. Ngagel Jaya Utara No.141, Baratajaya, Gubeng',
+        jam: 'Setiap hari',
+        price: 'Murah meriah',
+        rating: 5,
+        ratingText: '4.7/5',
+        desc: 'Toko thrift & casual fashion dengan vibe anak muda yang kuat. Budget fashion + street style terlengkap area Surabaya Timur.',
+        features: ['♻️ Thrift & preloved', '🔥 Street style', '💸 Harga kaki lima', '🕐 Tutup 21.00'],
+        reviews: ['"Barang bintang 5, harga kaki 5"', '"Toko anak casual banget 🔥"']
+      },
+      {
+        name: 'TEBAL.ID STORE',
+        img: 'https://lh3.googleusercontent.com/gps-cs-s/APNQkAFiIeLObF5hngJBe1PRPFFYSKoYUI-XyXk5RQa01kchonY9Ph2QPvGQeh4fi7jVlWgRCdJz8NH2G-zmnhbb7ekf7Ymm3rUrkrJEd2pdD5UKy8yxIXP_2PP7Oc3zOmvHJa9zXliRkzUD8wyT=s1360-w1360-h1020-rw',
+        address: 'Jl. Ngagel Rejo No.2, Ngagelrejo, Wonokromo',
+        jam: 'Setiap hari',
+        price: 'Variatif',
+        rating: 4,
+        ratingText: '4.3/5',
+        desc: 'Toko fashion branded style & fashion murah. Banyak pilihan outfit dari casual hingga kekinian dengan harga budget-friendly.',
+        features: ['👕 Branded style', '🧥 Hoodie & jaket', '💰 Harga terjangkau', '🛍️ Koleksi variatif'],
+        reviews: ['"Toko fashion branded terlengkap area Surabaya"', '"Barang murah tapi model variatif"']
+      },
+      {
+        name: 'Branded Man Store (BMS)',
+        img: 'https://lh3.googleusercontent.com/p/AF1QipOHgU7mQUwNJMxN4cXC7ElKGRxgSa4zWtT_tIUZ=s1360-w1360-h1020-rw',
+        address: 'Royal Plaza Lantai GF, Jl. A Yani Frontage Barat No.16-18, Wonokromo',
+        jam: 'Setiap hari',
+        price: 'Diskon hingga 60%',
+        rating: 5,
+        ratingText: '4.8/5',
+        desc: 'Toko fashion pria branded original dengan harga lebih terjangkau. Original bergaransi, diskon besar, cocok tampil stylish hemat.',
+        features: ['🏷️ Branded original', '🧥 Jaket & outer', '👔 Kemeja & kaos', '💳 Diskon s/d 60%'],
+        reviews: ['"Barangnya bagus semua dan pelayanan ramah."', '"Recommended buat yang mau barang branded dengan harga terjangkau."']
+      }
+      
+    ]
+  }
+};
+
+/* ===== MODAL ===== */
+function openModal(type) {
+  const d = data[type];
+  if (!d) return;
+  let html = `<div class="modal-title">${d.title}</div><div class="modal-subtitle">${d.subtitle}</div>`;
+
+  d.places.forEach(p => {
+    const clampedRating = Math.max(0, Math.min(5, p.rating || 0));
+    const stars = '★'.repeat(clampedRating) + '☆'.repeat(5 - clampedRating);
+    const reviews = p.reviews.map(r => `<div class="review-item">${r}</div>`).join('');
+    const features = p.features.map(f => `<span>${f}</span>`).join('');
+
+    html += `
+      <div class="place-card">
+        <img src="${p.img}" alt="${p.name}" loading="lazy">
+        <div class="place-card-body">
+          <h3>${p.name}</h3>
+          <div class="place-info">
+            <span>📍 ${p.address}</span>
+            <span>🕐 ${p.jam}</span>
+            <span class="price">💰 ${p.price}</span>
+          </div>
+          <p class="place-desc">${p.desc}</p>
+          <div class="place-features">${features}</div>
+          <div class="place-rating">
+            <span class="stars">${stars}</span>
+            <span>${p.ratingText}</span>
+          </div>
+          <div class="place-reviews">${reviews}</div>
+        </div>
+      </div>`;
+  });
+
+  document.getElementById('modal-content').innerHTML = html;
+  document.getElementById('modal-overlay').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  document.getElementById('modal-overlay').classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+function handleOverlayClick(e) {
+  if (e.target === document.getElementById('modal-overlay')) closeModal();
+}
+
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+/* ===== BUDGET GENERATOR ===== */
+const allItems = [
+  { name: 'Taman Grand Harvest', cat: 'Wisata', minBudget: 0, img: 'https://cms.portaljtv.com/assets/upload-gambar/jtv_1738755540.jpg', price: 'GRATIS', badge: 'badge-Wisata' },
+  { name: 'Taman Angsa', cat: 'Wisata', minBudget: 0, img: 'https://lh3.googleusercontent.com/gps-cs-s/APNQkAHLp7mtY8fTJZvtANWiTw61sbjAGIE9gyY0zKJj3RPjv-jvNX00TCtSgjx_9lt4b1EoU5utG949qeFC4mx8N9cXRxISPQMkgmogyMrKHVGO5ngxU-IDV_U_vjwCGRR0MHQEUJ0y=s1360-w1360-h1020-rw', price: 'GRATIS', badge: 'badge-Wisata' },
+  { name: 'Graha Natura Park', cat: 'Wisata', minBudget: 0, img: 'https://lh3.googleusercontent.com/gps-cs-s/APNQkAE85FI3b8humAllO6i69p3LTw288ZxtbccN6TTxZEQ84i51JyzrIo0oD4aAogHND3YUg4_IsYohQBnYliPYZoiw0mi1aUQEBL3hBiGh3YRiWfPma4-n3g_HkvGYJ7MXq6MIWehW=s1360-w1360-h1020-rw', price: 'GRATIS', badge: 'badge-Wisata' },
+  { name: 'Warkop Goeboeg 99', cat: 'Nongki', minBudget: 1000, img: 'https://lh3.googleusercontent.com/grass-cs/ANxoTn1XpTGr480RJ6PvF-RLs9EZumYtPjo1ay3ZJtuWDhPbQLdYu6fh3pbSZPzy1dfn7R_7PCpjc-M8T0PZCQv7-nLADhJUsBRdrlOW698u3cfJT7M8KpZfoxHrjjczFaxFwOUUzp8g=s1360-w1360-h1020-rw', price: 'Rp 1k – 25k', badge: 'badge-Nongki' },
+  { name: 'Kedai Kaladulu', cat: 'Nongki', minBudget: 15000, img: 'https://lh3.googleusercontent.com/gps-cs-s/APNQkAEqKYuX9eG0kwH8U0bbTC721OG0oPIPabwjuuRtZYyuLNMCZr4PSLCXZQ8pwCg_3SDyIyZdwFTpf-U2IE97HO3i0jKPjwGWdFynus25w0E2k_bsRY9kniGbMVzXpHxoNcd4Fk5y=s1360-w1360-h1020-rw', price: 'Rp 15k – 30k', badge: 'badge-Nongki' },
+  { name: 'Rene Cafe', cat: 'Nongki', minBudget: 20000, img: 'https://lh3.googleusercontent.com/p/AF1QipOpQ7FbWUHXQfIjm6xvX3hoj_YAM7fsOYDfj-OL=s1360-w1360-h1020-rw', price: 'Rp 20k – 30k', badge: 'badge-Nongki' },
+  { name: 'Dafarin Production', cat: 'Fashion', minBudget: 50000, img: 'https://mms.img.susercontent.com/id-11134210-7ra0k-mc1lz7pzm86a06@resize_ss700x700', price: 'Mulai Rp 50k', badge: 'badge-Fashion' },
+  { name: 'Rubylicious', cat: 'Fashion', minBudget: 50000, img: 'https://lh3.googleusercontent.com/gps-cs-s/APNQkAFgT0Vnypc-9I_4VrU0yHZu8Yta4tXr8_mQlWzzJOBMfMvvoGp0F6IhIAeGc9O06cbGJ-8oCZLAkE_PO3im--FyYRYKQLxkBwwN8Im9M2KHuD7abni_FE4UCrBRXksN_oGywuyr=s1360-w1360-h1020-rw', price: 'Mulai Rp 50k', badge: 'badge-Fashion' },
+  { name: 'TCO', cat: 'Fashion', minBudget: 50000, img: 'https://lh3.googleusercontent.com/gps-cs-s/APNQkAGFwWVoK0qXjCZ1EWLqp59ryoF__c0oEoa_vx4ziiKPZMjyIUM4yijaBd8Flxm7JLpInXBqJCg59dcLy6k9dSdB8tJe_JdtBlKUgERVA8nO0Po2IF9XX1eOLJwYDCnhXtgYJseqDA=s1360-w1360-h1020-rw', price: 'Mulai Rp 50k', badge: 'badge-Fashion' },
+];
+
+function generateBudget() {
+  var raw = document.getElementById('budget-input').value.trim();
+  var b = Number(raw);
+  var grid = document.getElementById('result-grid');
+
+  if (raw === '' || isNaN(b) || b < 0) {
+    grid.innerHTML = '<p style="text-align:center;color:var(--text-mid);padding:20px;">Masukkan nominal budget yang valid.</p>';
+    return;
+  }
+
+  var categories = ['Wisata', 'Nongki', 'Fashion'];
+  var catIcon = {Wisata: '🌿', Nongki: '☕', Fashion: '👗'};
+  var html = '';
+  var totalFound = 0;
+
+  categories.forEach(function(cat) {
+    var items = allItems.filter(function(i) { return i.cat === cat && b >= i.minBudget; });
+    if (items.length === 0) return;
+    totalFound += items.length;
+    html += '<div style="grid-column:1/-1;margin:16px 0 6px;"><span style="font-family:\'Playfair Display\',serif;font-size:16px;font-weight:700;color:var(--brown-dark);">' + catIcon[cat] + ' ' + cat + '</span></div>';
+    items.forEach(function(item, i) {
+      html += '<div class="result-item" style="animation-delay:' + (i*0.07) + 's">'
+        + '<img src="' + item.img + '" alt="' + item.name + '" loading="lazy">'
+        + '<div class="result-item-body">'
+        + '<span class="result-item-badge ' + item.badge + '">' + item.cat + '</span>'
+        + '<h4>' + item.name + '</h4>'
+        + '<p>' + item.price + '</p>'
+        + '</div></div>';
+    });
+  });
+
+  if (totalFound === 0) {
+    grid.innerHTML = '<p style="text-align:center;color:var(--text-mid);padding:20px;">Budget terlalu kecil. Masukkan minimal Rp 0 untuk wisata gratis, atau Rp 1.000 untuk nongki!</p>';
+    return;
+  }
+  grid.innerHTML = html;
+}
+
+document.getElementById('budget-input').addEventListener('keydown', e => {
+  if (e.key === 'Enter') generateBudget();
+});
+</script>
+</body>
+</html>
