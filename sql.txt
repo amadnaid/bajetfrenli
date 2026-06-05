@@ -1,0 +1,96 @@
+CREATE DATABASE IF NOT EXISTS surabaya_life_budget;
+USE surabaya_life_budget;
+
+-- ==========================
+-- TABEL PENGGUNA
+-- ==========================
+CREATE TABLE IF NOT EXISTS users (
+    user_id INT AUTO_INCREMENT PRIMARY KEY,
+    nama VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    foto_profil VARCHAR(255),
+    tanggal_daftar TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- ==========================
+-- TABEL PENJUAL / PEMILIK USAHA
+-- ==========================
+CREATE TABLE IF NOT EXISTS sellers (
+    seller_id INT AUTO_INCREMENT PRIMARY KEY,
+    nama_pemilik VARCHAR(100) NOT NULL,
+    nama_usaha VARCHAR(150) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    nomor_telepon VARCHAR(20),
+    alamat TEXT,
+    status_verifikasi ENUM('Pending','Disetujui','Ditolak') DEFAULT 'Pending',
+    tanggal_daftar TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- ==========================
+-- TABEL KATEGORI TEMPAT
+-- ==========================
+CREATE TABLE IF NOT EXISTS categories (
+    category_id INT AUTO_INCREMENT PRIMARY KEY,
+    nama_kategori VARCHAR(100) NOT NULL
+);
+
+-- ==========================
+-- TABEL USAHA/TEMPAT
+-- ==========================
+CREATE TABLE IF NOT EXISTS businesses (
+    business_id INT AUTO_INCREMENT PRIMARY KEY,
+    seller_id INT NOT NULL,
+    category_id INT NOT NULL,
+    nama_tempat VARCHAR(150) NOT NULL,
+    deskripsi TEXT,
+    alamat TEXT,
+    harga_min INT DEFAULT 0,
+    harga_max INT DEFAULT 0,
+    jam_buka VARCHAR(100),
+    kontak VARCHAR(50),
+    foto_utama VARCHAR(255),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (seller_id) REFERENCES sellers(seller_id) ON DELETE CASCADE,
+    FOREIGN KEY (category_id) REFERENCES categories(category_id)
+);
+
+-- ==========================
+-- TABEL RATING & REVIEW
+-- ==========================
+CREATE TABLE IF NOT EXISTS ratings (
+    rating_id INT AUTO_INCREMENT PRIMARY KEY,
+    business_id INT NOT NULL,
+    user_id INT NOT NULL,
+    rating TINYINT NOT NULL CHECK (rating BETWEEN 1 AND 5),
+    komentar TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (business_id) REFERENCES businesses(business_id) ON DELETE CASCADE,
+    FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE
+);
+
+-- ==========================
+-- TABEL FOTO DOKUMENTASI PENGUNJUNG
+-- ==========================
+CREATE TABLE IF NOT EXISTS business_photos (
+    photo_id INT AUTO_INCREMENT PRIMARY KEY,
+    business_id INT NOT NULL,
+    user_id INT NOT NULL,
+    foto VARCHAR(255) NOT NULL,
+    caption TEXT,
+    uploaded_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (business_id) REFERENCES businesses(business_id) ON DELETE CASCADE,
+    FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE
+);
+
+-- ==========================
+-- DATA AWAL KATEGORI
+-- ==========================
+INSERT IGNORE INTO categories (category_id, nama_kategori) VALUES
+(1, 'Wisata'),
+(2, 'Nongki & Kafe'),
+(3, 'Makanan'),
+(4, 'Fashion'),
+(5, 'Kos & Hunian'),
+(6, 'Kebutuhan Sehari-hari');

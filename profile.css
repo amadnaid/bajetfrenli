@@ -1,0 +1,574 @@
+/* =============================================
+   PROFILE PAGE – Surabaya Life On a Budget
+   ============================================= */
+
+.profile-page {
+  background: #f7f9f7;
+  min-height: 100vh;
+}
+
+/* ===== LAYOUT ===== */
+.profile-main {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 100px 1.5rem 3rem;
+}
+
+@media (max-width: 768px) {
+  .profile-main {
+    grid-template-columns: 1fr;
+    padding-top: 80px;
+  }
+}
+
+/* ===== SIDEBAR ===== */
+.profile-sidebar {
+  background: #fff;
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,.07);
+  text-align: center;
+  height: fit-content;
+  position: sticky;
+  top: 90px;
+}
+
+/* Avatar */
+.avatar-wrap {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.avatar-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #2d6a4f;
+}
+
+.avatar-placeholder {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2d6a4f, #52b788);
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.avatar-placeholder.seller-avatar {
+  font-size: 2rem;
+  background: linear-gradient(135deg, #1b4332, #40916c);
+}
+
+.avatar-edit-btn {
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  background: #fff;
+  border: 2px solid #2d6a4f;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .8rem;
+  cursor: pointer;
+  transition: background .2s;
+}
+.avatar-edit-btn:hover { background: #d8f3dc; }
+
+.profile-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1b1b1b;
+  margin: .25rem 0 .1rem;
+}
+
+.profile-email {
+  font-size: .85rem;
+  color: #666;
+  margin: 0 0 .25rem;
+  word-break: break-all;
+}
+
+.profile-since {
+  font-size: .8rem;
+  color: #999;
+  margin: 0 0 1rem;
+}
+
+.profile-role-badge {
+  display: inline-block;
+  background: #d8f3dc;
+  color: #2d6a4f;
+  font-size: .75rem;
+  font-weight: 600;
+  padding: .2rem .7rem;
+  border-radius: 20px;
+  margin-bottom: .5rem;
+}
+
+/* Stats */
+.profile-stats {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 1rem 0;
+  padding: 1rem 0;
+  border-top: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .1rem;
+}
+
+.stat-number {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2d6a4f;
+}
+
+.stat-label {
+  font-size: .75rem;
+  color: #888;
+}
+
+/* Seller status badge */
+.seller-status {
+  display: inline-block;
+  padding: .3rem .9rem;
+  border-radius: 20px;
+  font-size: .8rem;
+  font-weight: 600;
+  margin: .75rem 0 1rem;
+}
+.status-pending  { background: #fff3cd; color: #856404; }
+.status-approved { background: #d1e7dd; color: #0f5132; }
+.status-rejected { background: #f8d7da; color: #842029; }
+
+/* Sidebar buttons */
+.btn-edit-profile {
+  display: block;
+  width: 100%;
+  padding: .65rem 1rem;
+  background: #2d6a4f;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: .9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background .2s;
+  margin-bottom: .6rem;
+}
+.btn-edit-profile:hover { background: #1b4332; }
+
+.btn-back {
+  display: block;
+  padding: .6rem 1rem;
+  color: #2d6a4f;
+  font-size: .85rem;
+  text-decoration: none;
+  border: 1px solid #2d6a4f;
+  border-radius: 10px;
+  transition: background .2s;
+}
+.btn-back:hover { background: #d8f3dc; }
+
+/* ===== CONTENT AREA ===== */
+.profile-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Section card */
+.section-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 1.75rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,.07);
+}
+
+.section-card h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #1b1b1b;
+  margin: 0 0 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.section-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+.section-card-header h3 { margin: 0; }
+
+.badge {
+  background: #2d6a4f;
+  color: #fff;
+  font-size: .75rem;
+  font-weight: 700;
+  padding: .15rem .55rem;
+  border-radius: 20px;
+}
+
+/* ===== EDIT FORM CARD ===== */
+.edit-form-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 1.75rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,.07);
+  border-left: 4px solid #2d6a4f;
+}
+
+.edit-form-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0 0 1.25rem;
+  color: #2d6a4f;
+}
+
+.edit-form .form-group {
+  margin-bottom: 1rem;
+}
+
+.edit-form label {
+  display: block;
+  font-size: .85rem;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: .35rem;
+}
+
+.edit-form label small {
+  font-weight: 400;
+  color: #999;
+  font-size: .78rem;
+}
+
+.edit-form input[type="text"],
+.edit-form input[type="email"],
+.edit-form input[type="password"],
+.edit-form textarea {
+  width: 100%;
+  padding: .65rem .9rem;
+  border: 1.5px solid #ddd;
+  border-radius: 8px;
+  font-size: .9rem;
+  font-family: inherit;
+  transition: border-color .2s;
+  box-sizing: border-box;
+}
+
+.edit-form input:focus,
+.edit-form textarea:focus {
+  outline: none;
+  border-color: #2d6a4f;
+}
+
+.form-actions {
+  display: flex;
+  gap: .75rem;
+  margin-top: 1.25rem;
+}
+
+.btn-save {
+  padding: .65rem 1.5rem;
+  background: #2d6a4f;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: .9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background .2s;
+}
+.btn-save:hover { background: #1b4332; }
+
+.btn-cancel {
+  padding: .65rem 1.2rem;
+  background: #fff;
+  color: #666;
+  border: 1.5px solid #ddd;
+  border-radius: 10px;
+  font-size: .9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background .2s;
+}
+.btn-cancel:hover { background: #f5f5f5; }
+
+/* Alert */
+.alert-success {
+  background: #d1e7dd;
+  color: #0f5132;
+  padding: .75rem 1rem;
+  border-radius: 8px;
+  font-size: .9rem;
+  margin-bottom: 1rem;
+}
+.alert-error {
+  background: #f8d7da;
+  color: #842029;
+  padding: .75rem 1rem;
+  border-radius: 8px;
+  font-size: .9rem;
+  margin-bottom: 1rem;
+}
+
+/* ===== RIWAYAT REVIEW ===== */
+.review-history-list {
+  display: flex;
+  flex-direction: column;
+  gap: .9rem;
+}
+
+.review-history-card {
+  border: 1.5px solid #eee;
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  cursor: pointer;
+  transition: border-color .2s, box-shadow .2s, transform .15s;
+  background: #fafafa;
+}
+
+.review-history-card:hover {
+  border-color: #2d6a4f;
+  box-shadow: 0 4px 16px rgba(45,106,79,.1);
+  transform: translateY(-2px);
+}
+
+.review-history-meta {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  margin-bottom: .4rem;
+  flex-wrap: wrap;
+}
+
+.review-place-name {
+  font-weight: 600;
+  color: #1b1b1b;
+  font-size: .95rem;
+}
+
+.review-category-tag {
+  background: #d8f3dc;
+  color: #2d6a4f;
+  font-size: .72rem;
+  font-weight: 600;
+  padding: .15rem .55rem;
+  border-radius: 20px;
+}
+
+.review-stars {
+  color: #f5a623;
+  font-size: 1.1rem;
+  margin-bottom: .3rem;
+  display: flex;
+  align-items: center;
+  gap: .3rem;
+}
+
+.review-score {
+  font-size: .8rem;
+  color: #888;
+  font-weight: 600;
+}
+
+.review-komentar {
+  font-size: .9rem;
+  color: #444;
+  margin: .25rem 0 .4rem;
+  font-style: italic;
+}
+
+.review-date {
+  font-size: .78rem;
+  color: #aaa;
+}
+
+/* ===== BUSINESS PROFILE CARD (seller) ===== */
+.business-profile-card {
+  border: 1.5px solid #eee;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.business-cover {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.business-profile-body {
+  padding: 1.25rem;
+}
+
+.business-profile-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: .75rem;
+}
+
+.business-profile-top h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: .25rem 0 0;
+  color: #1b1b1b;
+}
+
+.btn-edit-small {
+  white-space: nowrap;
+  padding: .45rem 1rem;
+  background: #2d6a4f;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: .82rem;
+  font-weight: 600;
+  transition: background .2s;
+}
+.btn-edit-small:hover { background: #1b4332; }
+
+.business-profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+  font-size: .88rem;
+  color: #555;
+  margin-bottom: .75rem;
+}
+
+.business-profile-info .price-range {
+  color: #2d6a4f;
+  font-weight: 600;
+}
+
+.business-desc {
+  font-size: .9rem;
+  color: #555;
+  margin-bottom: .75rem;
+}
+
+.business-rating-summary {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  font-size: .9rem;
+  color: #555;
+}
+
+.business-rating-summary .stars {
+  color: #f5a623;
+  font-size: 1.1rem;
+}
+
+/* Recent reviews di seller profile */
+.recent-reviews {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #eee;
+}
+
+.recent-reviews h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0 0 1rem;
+  color: #1b1b1b;
+}
+
+.btn-lihat-semua {
+  display: block;
+  width: 100%;
+  padding: .65rem;
+  background: transparent;
+  border: 1.5px dashed #2d6a4f;
+  border-radius: 10px;
+  color: #2d6a4f;
+  font-size: .88rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background .2s;
+}
+.btn-lihat-semua:hover { background: #d8f3dc; }
+
+/* ===== EMPTY STATE ===== */
+.empty-state {
+  text-align: center;
+  padding: 2.5rem 1rem;
+  color: #aaa;
+}
+.empty-state span { font-size: 2.5rem; display: block; margin-bottom: .75rem; }
+.empty-state p { margin: 0 0 1rem; font-size: .95rem; }
+
+/* ===== REVIEW ITEMS (di detail usaha) ===== */
+.review-item {
+  padding: .9rem 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+.review-item:last-child { border-bottom: none; }
+.review-item strong { font-size: .9rem; color: #1b1b1b; }
+.review-item p { font-size: .88rem; color: #555; margin: .25rem 0; }
+.stars.small { font-size: .95rem; color: #f5a623; }
+
+/* ===== MODAL OVERRIDE untuk profile page ===== */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.5);
+  z-index: 1000;
+  overflow-y: auto;
+  padding: 2rem 1rem;
+}
+.modal-overlay.active { display: flex; align-items: flex-start; justify-content: center; }
+.modal-box {
+  background: #fff;
+  border-radius: 16px;
+  max-width: 720px;
+  width: 100%;
+  position: relative;
+  padding: 2rem;
+  margin: auto;
+}
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+  color: #666;
+}
+.modal-loading {
+  text-align: center;
+  padding: 2rem;
+  color: #888;
+  font-size: .95rem;
+}

@@ -1,0 +1,189 @@
+:root{
+
+    --brown-dark:#3d2314;
+    --brown-mid:#6b3a26;
+
+    --cream-light:#faf4ec;
+    --cream-mid:#e8d5bc;
+
+    --accent-gold:#c9843a;
+    --accent-rust:#b85c2a;
+
+}
+
+body{
+
+    background:var(--cream-light);
+
+    font-family:'DM Sans',sans-serif;
+
+    margin:0;
+    padding:40px;
+
+}
+
+.review-container{
+
+    max-width:800px;
+
+    margin:auto;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:24px;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.1);
+
+}
+
+.review-header{
+
+    text-align:center;
+
+    margin-bottom:30px;
+
+}
+
+.review-header h1{
+
+    color:var(--brown-dark);
+
+    margin-bottom:10px;
+
+}
+
+.review-header p{
+
+    color:#666;
+
+}
+
+.success-box{
+
+    background:#d4edda;
+
+    color:#155724;
+
+    padding:15px;
+
+    border-radius:10px;
+
+    margin-bottom:20px;
+
+}
+
+.form-group{
+
+    margin-bottom:25px;
+
+}
+
+.form-group label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    font-weight:600;
+
+}
+
+.form-group select,
+.form-group textarea,
+.form-group input[type="text"],
+.form-group input[type="file"]{
+
+    width:100%;
+
+    padding:14px;
+
+    border:2px solid var(--cream-mid);
+
+    border-radius:12px;
+
+    box-sizing:border-box;
+
+}
+
+.form-group textarea{
+
+    resize:vertical;
+
+}
+
+.star-rating{
+
+    display:flex;
+
+    flex-direction:row-reverse;
+
+    justify-content:flex-end;
+
+}
+
+.star-rating input{
+
+    display:none;
+
+}
+
+.star-rating label{
+
+    font-size:38px;
+
+    color:#ccc;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+}
+
+.star-rating input:checked ~ label{
+
+    color:#f7b500;
+
+}
+
+.star-rating label:hover,
+.star-rating label:hover ~ label{
+
+    color:#f7b500;
+
+}
+
+.submit-btn{
+
+    width:100%;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    color:white;
+
+    background:
+    linear-gradient(
+        135deg,
+        var(--accent-gold),
+        var(--accent-rust)
+    );
+
+}
+
+.submit-btn:hover{
+
+    opacity:.9;
+
+}
